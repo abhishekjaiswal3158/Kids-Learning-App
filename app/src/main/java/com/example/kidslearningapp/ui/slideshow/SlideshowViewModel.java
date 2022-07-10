@@ -1,8 +1,14 @@
 package com.example.kidslearningapp.ui.slideshow;
 
+import android.graphics.Color;
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import com.example.kidslearningapp.R;
 
 public class SlideshowViewModel extends ViewModel {
 
@@ -10,7 +16,8 @@ public class SlideshowViewModel extends ViewModel {
 
     public SlideshowViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("SOME VIDEO LINKS");
+
     }
 
     public LiveData<String> getText() {

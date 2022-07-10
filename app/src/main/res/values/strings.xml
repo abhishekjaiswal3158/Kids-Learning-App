@@ -9,7 +9,8 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_slideshow">VIDEO LINKS</string>
+    <string name="video1"><a href="https://www.youtube.com/watch?v=8WaWnhqWwNkab_channel=RiyaRhymes">VIDEO 1</a></string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>

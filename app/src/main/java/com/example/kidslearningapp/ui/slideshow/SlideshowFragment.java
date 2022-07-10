@@ -1,6 +1,8 @@
 package com.example.kidslearningapp.ui.slideshow;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,12 +24,21 @@ public class SlideshowFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         slideshowViewModel =
                 ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+        final View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
         final TextView textView = root.findViewById(R.id.text_slideshow);
+
         slideshowViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
+                TextView linkTextView = root.findViewById(R.id.video);
+
+                // method to redirect to provided link
+                linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+
+                // method to change color of link
+                linkTextView.setLinkTextColor(Color.BLUE);
+
             }
         });
         return root;
